@@ -782,3 +782,47 @@ img {
         border-radius: 12px;
     }
 }
+
+/* Container for the logo to ensure alignment */
+.logo, .footer-brand img {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* Style for the Header Logo */
+.header .logo img {
+    height: 50px; /* Adjust based on your preference */
+    width: auto;  /* Maintains aspect ratio */
+    object-fit: contain;
+    /* Optional: if your logo has a white background, 
+       this makes it blend better or pop */
+    border-radius: 4px; 
+}
+
+/* Hover effect for a professional touch */
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Style for the Footer Logo */
+.footer-brand img {
+    height: 60px; /* Slightly larger in the footer often looks better */
+    width: auto;
+    margin-bottom: 15px;
+    filter: brightness(0) invert(1); /* DELETE THIS LINE if you want original colors */
+    /* Note: filter: brightness(0) invert(1) turns a dark logo white, 
+       which looks great on dark footers. */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
